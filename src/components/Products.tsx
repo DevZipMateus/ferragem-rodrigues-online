@@ -1,6 +1,8 @@
 import { Zap, Droplets, Wrench, Paintbrush, Hammer, Dog } from 'lucide-react';
 import toolsDisplay from '@/assets/tools-display.jpg';
 import paintSupplies from '@/assets/paint-supplies.jpg';
+import electricalSupplies from '@/assets/electrical-supplies.jpg';
+import plumbingSupplies from '@/assets/plumbing-supplies.jpg';
 
 const Products = () => {
   const products = [
@@ -67,19 +69,33 @@ const Products = () => {
         </div>
 
         {/* Image Gallery */}
-        <div className="grid md:grid-cols-2 gap-6 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
           <div className="rounded-2xl overflow-hidden shadow-lg">
             <img
               src={toolsDisplay}
               alt="Ferramentas profissionais organizadas - chaves, alicates, martelos"
-              className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
+              className="w-full h-48 object-cover hover:scale-105 transition-transform duration-500"
             />
           </div>
           <div className="rounded-2xl overflow-hidden shadow-lg">
             <img
               src={paintSupplies}
               alt="Tintas coloridas e pincéis para pintura"
-              className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
+              className="w-full h-48 object-cover hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+          <div className="rounded-2xl overflow-hidden shadow-lg">
+            <img
+              src={electricalSupplies}
+              alt="Material elétrico - fios, cabos, disjuntores e tomadas"
+              className="w-full h-48 object-cover hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+          <div className="rounded-2xl overflow-hidden shadow-lg">
+            <img
+              src={plumbingSupplies}
+              alt="Material hidráulico - tubos, conexões e registros"
+              className="w-full h-48 object-cover hover:scale-105 transition-transform duration-500"
             />
           </div>
         </div>
