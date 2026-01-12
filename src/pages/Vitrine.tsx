@@ -105,11 +105,23 @@ const Vitrine = () => {
     calculateHeight();
     window.addEventListener('resize', calculateHeight);
 
-    return () => window.removeEventListener('resize', calculateHeight);
+    // Lock body scroll
+    document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
+
+    return () => {
+      window.removeEventListener('resize', calculateHeight);
+      // Restore scroll on unmount
+      document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
+    };
   }, []);
 
   return (
-    <div className="h-screen w-full overflow-hidden flex flex-col">
+    <div 
+      className="h-screen w-full flex flex-col"
+      style={{ overflow: 'hidden', position: 'fixed', top: 0, left: 0, right: 0, bottom: 0 }}
+    >
       {/* Header - 80px */}
       <VitrineHeader />
 
@@ -117,11 +129,15 @@ const Vitrine = () => {
       <div className="h-20 flex-shrink-0" />
 
       {/* Iframe - dynamic height */}
-      <div className="flex-1 w-full" style={{ height: `${iframeHeight}px` }}>
+      <div 
+        className="w-full overflow-hidden" 
+        style={{ height: `${iframeHeight}px`, flexShrink: 0 }}
+      >
         <iframe
           src="https://ferragemrodrigues.egestor.com.br/vitrine/"
-          style={{ width: '100%', height: '100%', border: 'none' }}
+          style={{ width: '100%', height: '100%', border: 'none', display: 'block' }}
           title="Vitrine de Produtos - Ferragem Rodrigues"
+          scrolling="auto"
         />
       </div>
 
