@@ -1,4 +1,5 @@
-import { Phone, MapPin } from 'lucide-react';
+import { Phone, MapPin, ShoppingBag } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import heroBg from '@/assets/hero-bg.jpg';
 
 const Hero = () => {
@@ -36,7 +37,7 @@ const Hero = () => {
               Qualidade, variedade e atendimento especializado em um só lugar.
             </h2>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-10">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-6">
               <a
                 href="https://wa.me/5551992683363"
                 target="_blank"
@@ -46,9 +47,19 @@ const Hero = () => {
                 <Phone className="w-5 h-5" />
                 Fale pelo WhatsApp
               </a>
+              <Link
+                to="/vitrine"
+                className="btn-outline-light flex items-center justify-center gap-2"
+              >
+                <ShoppingBag className="w-5 h-5" />
+                Ver vitrine
+              </Link>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-10">
               <a
                 href="#contato"
-                className="btn-outline-light flex items-center justify-center gap-2"
+                className="text-primary-foreground/80 hover:text-accent transition-colors flex items-center justify-center gap-2 font-medium"
               >
                 <MapPin className="w-5 h-5" />
                 Como chegar
