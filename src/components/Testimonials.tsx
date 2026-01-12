@@ -1,4 +1,5 @@
 import { Star, ExternalLink } from 'lucide-react';
+import customerService from '@/assets/customer-service.jpg';
 
 const Testimonials = () => {
   const testimonials = [
@@ -28,18 +29,28 @@ const Testimonials = () => {
   return (
     <section id="depoimentos" className="section-padding bg-background">
       <div className="container-section">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <span className="text-accent-foreground font-semibold text-sm uppercase tracking-wider bg-accent px-4 py-1 rounded-full">
-            Depoimentos
-          </span>
-          <h2 className="heading-secondary text-foreground mt-4 mb-4">
-            O que nossos clientes dizem
-          </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            A satisfação dos nossos clientes é nossa maior recompensa. Veja o que eles
-            têm a dizer sobre nossa loja.
-          </p>
+        {/* Section Header with Image */}
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+          <div>
+            <span className="text-accent-foreground font-semibold text-sm uppercase tracking-wider bg-accent px-4 py-1 rounded-full">
+              Depoimentos
+            </span>
+            <h2 className="heading-secondary text-foreground mt-4 mb-4">
+              O que nossos clientes dizem
+            </h2>
+            <p className="text-muted-foreground">
+              A satisfação dos nossos clientes é nossa maior recompensa. Veja o que eles
+              têm a dizer sobre nossa loja. Nosso compromisso é oferecer o melhor atendimento
+              e produtos de qualidade.
+            </p>
+          </div>
+          <div className="rounded-2xl overflow-hidden shadow-xl">
+            <img
+              src={customerService}
+              alt="Atendimento ao cliente na Ferragem Rodrigues"
+              className="w-full h-72 object-cover"
+            />
+          </div>
         </div>
 
         {/* Testimonials Grid */}
