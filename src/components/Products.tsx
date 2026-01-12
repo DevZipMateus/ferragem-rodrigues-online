@@ -1,4 +1,6 @@
 import { Zap, Droplets, Wrench, Paintbrush, Hammer, Dog } from 'lucide-react';
+import toolsDisplay from '@/assets/tools-display.jpg';
+import paintSupplies from '@/assets/paint-supplies.jpg';
 
 const Products = () => {
   const products = [
@@ -62,6 +64,24 @@ const Products = () => {
             tendências do setor e priorizando materiais que garantem segurança,
             durabilidade e ótimo custo-benefício.
           </p>
+        </div>
+
+        {/* Image Gallery */}
+        <div className="grid md:grid-cols-2 gap-6 mb-16">
+          <div className="rounded-2xl overflow-hidden shadow-lg">
+            <img
+              src={toolsDisplay}
+              alt="Ferramentas profissionais organizadas - chaves, alicates, martelos"
+              className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+          <div className="rounded-2xl overflow-hidden shadow-lg">
+            <img
+              src={paintSupplies}
+              alt="Tintas coloridas e pincéis para pintura"
+              className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
+            />
+          </div>
         </div>
 
         {/* Products Grid */}
