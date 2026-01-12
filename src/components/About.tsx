@@ -1,4 +1,5 @@
 import { Target, Eye, Heart, Award, Clock, Users } from 'lucide-react';
+import storeInterior from '@/assets/store-interior.jpg';
 
 const About = () => {
   const values = [
@@ -55,25 +56,31 @@ const About = () => {
               o melhor atendimento possível. Hoje somos referência em qualidade e
               variedade de produtos na região.
             </p>
+            
+            {/* Stats */}
+            <div className="grid grid-cols-2 gap-4 mt-8">
+              <div className="bg-secondary rounded-xl p-4 text-center">
+                <span className="text-3xl font-heading font-bold text-primary">+20</span>
+                <p className="text-muted-foreground text-sm mt-1">Anos de experiência</p>
+              </div>
+              <div className="bg-secondary rounded-xl p-4 text-center">
+                <span className="text-3xl font-heading font-bold text-primary">5000+</span>
+                <p className="text-muted-foreground text-sm mt-1">Produtos em estoque</p>
+              </div>
+            </div>
           </div>
-          <div className="bg-secondary rounded-2xl p-8">
-            <div className="grid grid-cols-2 gap-6">
-              <div className="text-center p-4">
-                <span className="text-4xl font-heading font-bold text-primary">+20</span>
-                <p className="text-muted-foreground mt-2">Anos de experiência</p>
-              </div>
-              <div className="text-center p-4">
-                <span className="text-4xl font-heading font-bold text-primary">1000+</span>
-                <p className="text-muted-foreground mt-2">Clientes atendidos</p>
-              </div>
-              <div className="text-center p-4">
-                <span className="text-4xl font-heading font-bold text-primary">5000+</span>
-                <p className="text-muted-foreground mt-2">Produtos em estoque</p>
-              </div>
-              <div className="text-center p-4">
-                <span className="text-4xl font-heading font-bold text-primary">100%</span>
-                <p className="text-muted-foreground mt-2">Compromisso</p>
-              </div>
+          
+          {/* Store Image */}
+          <div className="relative">
+            <div className="rounded-2xl overflow-hidden shadow-xl">
+              <img
+                src={storeInterior}
+                alt="Interior da loja Ferragem Rodrigues com prateleiras organizadas de ferramentas, tintas e materiais"
+                className="w-full h-[400px] object-cover"
+              />
+            </div>
+            <div className="absolute -bottom-4 -right-4 bg-accent text-accent-foreground px-6 py-3 rounded-xl shadow-lg font-heading font-bold">
+              Desde 2003
             </div>
           </div>
         </div>
