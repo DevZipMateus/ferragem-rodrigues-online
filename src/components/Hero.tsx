@@ -20,7 +20,7 @@ const Hero = () => {
       <div className="absolute top-0 right-0 w-1/3 h-full bg-accent/10 clip-path-diagonal hidden lg:block" />
 
       <div className="container-section relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="max-w-3xl mx-auto lg:mx-0">
           {/* Content */}
           <div className="text-center lg:text-left">
             <div className="inline-flex items-center gap-2 bg-accent/20 text-accent px-4 py-2 rounded-full mb-6">
@@ -72,24 +72,6 @@ const Hero = () => {
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-accent rounded-full" />
                 <span>Tintas</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Image/Visual */}
-          <div className="hidden lg:flex justify-center items-center">
-            <div className="relative">
-              <div className="w-80 h-80 bg-accent rounded-full opacity-20 absolute -top-10 -right-10" />
-              <div className="w-96 h-96 bg-gradient-to-br from-accent/30 to-transparent rounded-3xl flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="text-8xl mb-4">🔧</div>
-                  <p className="text-primary-foreground font-heading font-bold text-2xl">
-                    +20 anos
-                  </p>
-                  <p className="text-primary-foreground/80">
-                    de tradição e confiança
-                  </p>
-                </div>
               </div>
             </div>
           </div>
