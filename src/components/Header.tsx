@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Phone, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,11 +15,12 @@ const Header = () => {
   }, []);
 
   const navItems = [
-    { label: 'Início', href: '#inicio' },
-    { label: 'Sobre', href: '#sobre' },
-    { label: 'Produtos', href: '#produtos' },
-    { label: 'Depoimentos', href: '#depoimentos' },
-    { label: 'Contato', href: '#contato' },
+    { label: 'Início', href: '#inicio', isAnchor: true },
+    { label: 'Sobre', href: '#sobre', isAnchor: true },
+    { label: 'Produtos', href: '#produtos', isAnchor: true },
+    { label: 'Vitrine', href: '/vitrine', isAnchor: false },
+    { label: 'Depoimentos', href: '#depoimentos', isAnchor: true },
+    { label: 'Contato', href: '#contato', isAnchor: true },
   ];
 
   const scrollToSection = (href: string) => {
@@ -90,17 +92,27 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
             {navItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection(item.href);
-                }}
-                className="nav-link"
-              >
-                {item.label}
-              </a>
+              item.isAnchor ? (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection(item.href);
+                  }}
+                  className="nav-link"
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <Link
+                  key={item.href}
+                  to={item.href}
+                  className="nav-link"
+                >
+                  {item.label}
+                </Link>
+              )
             ))}
           </nav>
 
@@ -132,17 +144,28 @@ const Header = () => {
           <nav className="lg:hidden py-4 border-t border-primary-foreground/20">
             <div className="flex flex-col gap-4">
               {navItems.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    scrollToSection(item.href);
-                  }}
-                  className="text-primary-foreground hover:text-accent transition-colors font-medium py-2"
-                >
-                  {item.label}
-                </a>
+                item.isAnchor ? (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scrollToSection(item.href);
+                    }}
+                    className="text-primary-foreground hover:text-accent transition-colors font-medium py-2"
+                  >
+                    {item.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={item.href}
+                    to={item.href}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="text-primary-foreground hover:text-accent transition-colors font-medium py-2"
+                  >
+                    {item.label}
+                  </Link>
+                )
               ))}
               <a
                 href="https://wa.me/5551992683363"
