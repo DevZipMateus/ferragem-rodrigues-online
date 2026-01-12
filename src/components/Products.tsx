@@ -54,14 +54,14 @@ const Products = () => {
     <section id="produtos" className="section-padding bg-secondary">
       <div className="container-section">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <span className="text-accent-foreground font-semibold text-sm uppercase tracking-wider bg-accent px-4 py-1 rounded-full">
+        <div className="text-center mb-10 sm:mb-12 lg:mb-16">
+          <span className="text-accent-foreground font-semibold text-xs sm:text-sm uppercase tracking-wider bg-accent px-3 sm:px-4 py-1 rounded-full">
             Nossos produtos
           </span>
-          <h2 className="heading-secondary text-foreground mt-4 mb-4">
+          <h2 className="heading-secondary text-foreground mt-3 sm:mt-4 mb-3 sm:mb-4">
             Tudo que você precisa em um só lugar
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto text-sm sm:text-base px-4">
             Trabalhamos com um portfólio amplo e atualizado, sempre acompanhando as
             tendências do setor e priorizando materiais que garantem segurança,
             durabilidade e ótimo custo-benefício.
@@ -69,61 +69,61 @@ const Products = () => {
         </div>
 
         {/* Image Gallery */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
-          <div className="rounded-2xl overflow-hidden shadow-lg">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-10 sm:mb-12 lg:mb-16">
+          <div className="rounded-xl sm:rounded-2xl overflow-hidden shadow-lg">
             <img
               src={toolsDisplay}
               alt="Ferramentas profissionais organizadas - chaves, alicates, martelos"
-              className="w-full h-48 object-cover hover:scale-105 transition-transform duration-500"
+              className="w-full h-32 sm:h-40 lg:h-48 object-cover hover:scale-105 transition-transform duration-500"
             />
           </div>
-          <div className="rounded-2xl overflow-hidden shadow-lg">
+          <div className="rounded-xl sm:rounded-2xl overflow-hidden shadow-lg">
             <img
               src={paintSupplies}
               alt="Tintas coloridas e pincéis para pintura"
-              className="w-full h-48 object-cover hover:scale-105 transition-transform duration-500"
+              className="w-full h-32 sm:h-40 lg:h-48 object-cover hover:scale-105 transition-transform duration-500"
             />
           </div>
-          <div className="rounded-2xl overflow-hidden shadow-lg">
+          <div className="rounded-xl sm:rounded-2xl overflow-hidden shadow-lg">
             <img
               src={electricalSupplies}
               alt="Material elétrico - fios, cabos, disjuntores e tomadas"
-              className="w-full h-48 object-cover hover:scale-105 transition-transform duration-500"
+              className="w-full h-32 sm:h-40 lg:h-48 object-cover hover:scale-105 transition-transform duration-500"
             />
           </div>
-          <div className="rounded-2xl overflow-hidden shadow-lg">
+          <div className="rounded-xl sm:rounded-2xl overflow-hidden shadow-lg">
             <img
               src={plumbingSupplies}
               alt="Material hidráulico - tubos, conexões e registros"
-              className="w-full h-48 object-cover hover:scale-105 transition-transform duration-500"
+              className="w-full h-32 sm:h-40 lg:h-48 object-cover hover:scale-105 transition-transform duration-500"
             />
           </div>
         </div>
 
         {/* Products Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {products.map((product, index) => (
             <div
               key={index}
-              className="group bg-card rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              className="group bg-card rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
             >
               <div
-                className={`w-16 h-16 ${product.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
+                className={`w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 ${product.color} rounded-lg sm:rounded-xl flex items-center justify-center mb-3 sm:mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300`}
               >
-                <product.icon className="w-8 h-8 text-white" />
+                <product.icon className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 text-white" />
               </div>
-              <h3 className="heading-tertiary text-foreground mb-3">{product.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{product.description}</p>
+              <h3 className="text-sm sm:text-base lg:text-xl font-semibold text-foreground mb-1 sm:mb-2 lg:mb-3">{product.title}</h3>
+              <p className="text-muted-foreground leading-relaxed text-xs sm:text-sm lg:text-base hidden sm:block">{product.description}</p>
             </div>
           ))}
         </div>
 
         {/* Market Info */}
-        <div className="mt-16 bg-primary rounded-2xl p-8 md:p-12 text-center">
-          <h3 className="heading-tertiary text-primary-foreground mb-4">
+        <div className="mt-10 sm:mt-12 lg:mt-16 bg-primary rounded-xl sm:rounded-2xl p-5 sm:p-8 md:p-10 lg:p-12 text-center">
+          <h3 className="heading-tertiary text-primary-foreground mb-3 sm:mb-4">
             Mercado de atuação
           </h3>
-          <p className="text-primary-foreground/90 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-primary-foreground/90 max-w-3xl mx-auto leading-relaxed text-sm sm:text-base">
             Atuamos no mercado de ferragens e materiais para construção, oferecendo
             soluções completas para obras, reformas e manutenção. Atendemos tanto
             profissionais da construção civil quanto clientes que buscam praticidade,

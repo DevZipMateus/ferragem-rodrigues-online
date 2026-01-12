@@ -113,19 +113,19 @@
   }
 
   .section-padding {
-    @apply py-16 md:py-24;
+    @apply py-12 sm:py-16 md:py-20 lg:py-24;
   }
 
   .heading-primary {
-    @apply text-4xl md:text-5xl lg:text-6xl font-extrabold;
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight;
   }
 
   .heading-secondary {
-    @apply text-3xl md:text-4xl font-bold;
+    @apply text-2xl sm:text-3xl md:text-4xl font-bold leading-tight;
   }
 
   .heading-tertiary {
-    @apply text-xl md:text-2xl font-semibold;
+    @apply text-lg sm:text-xl md:text-2xl font-semibold;
   }
 
   .text-gradient {
@@ -138,31 +138,35 @@
 
   .btn-primary {
     @apply bg-primary text-primary-foreground hover:bg-[hsl(var(--navy-light))] 
-           font-semibold px-6 py-3 rounded-lg transition-all duration-300
-           focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
+           font-semibold px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg transition-all duration-300
+           focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2
+           text-sm sm:text-base;
   }
 
   .btn-accent {
     @apply bg-accent text-accent-foreground hover:bg-[hsl(var(--gold-dark))] 
-           font-semibold px-6 py-3 rounded-lg transition-all duration-300
-           focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+           font-semibold px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg transition-all duration-300
+           focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2
+           text-sm sm:text-base;
   }
 
   .btn-outline {
     @apply border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground
-           font-semibold px-6 py-3 rounded-lg transition-all duration-300
-           focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
+           font-semibold px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg transition-all duration-300
+           focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2
+           text-sm sm:text-base;
   }
 
   .btn-outline-light {
     @apply border-2 border-white/80 text-white hover:bg-white hover:text-primary
-           font-semibold px-6 py-3 rounded-lg transition-all duration-300
-           focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
+           font-semibold px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg transition-all duration-300
+           focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2
+           text-sm sm:text-base;
   }
 
   .nav-link {
     @apply text-primary-foreground/90 hover:text-accent font-medium 
-           transition-colors duration-200 relative;
+           transition-colors duration-200 relative text-sm lg:text-base;
   }
 
   .nav-link::after {
@@ -175,8 +179,8 @@
   }
 
   .whatsapp-float {
-    @apply fixed bottom-6 right-6 z-50 bg-[#25D366] text-white 
-           w-14 h-14 rounded-full flex items-center justify-center
+    @apply fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 bg-[#25D366] text-white 
+           w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center
            shadow-lg hover:shadow-xl transition-shadow duration-300;
   }
 }
